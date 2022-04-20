@@ -947,11 +947,19 @@ padding-left: 24px;
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
 .modal {
+
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   width: 528px;
   height: 581px;
@@ -969,11 +977,13 @@ padding-left: 24px;
   top: 8px;
   right: 8px;
 
+  cursor: pointer;
+
   margin: 0px;
   padding: 0px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: var(--hero-title-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
