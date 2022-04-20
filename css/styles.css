@@ -926,7 +926,7 @@ padding-left: 24px;
   color: var(--hero-title-color);
   }
 
-.card-link:hover .product-overlay {
+.card-link:hover, .card-link:focus .product-overlay {
   opacity: 1;
   transform: translateY(0);
 }
