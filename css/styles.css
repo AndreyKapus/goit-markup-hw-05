@@ -9,6 +9,9 @@
   --header-border-color:#ECECEC;
   --svg-color:#AFB1B8;
   --card-border-color: #EEEEEE;
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 250ms;
 }
 
 html {
@@ -72,6 +75,9 @@ html {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .logo-item {
@@ -95,8 +101,8 @@ html {
     padding-bottom: 32px;
 
     transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--timing-function);
 
     position: relative;
 }
@@ -192,8 +198,8 @@ html {
   padding-bottom: 32px;
 
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .site-contacts .mail:hover,
@@ -396,17 +402,19 @@ html {
 .feature-text {
   position: absolute;
   bottom: 0;
+   
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  left: 50%;
-  transform: translate(-50%);
 
   background-color: rgba(47, 48, 58, 0.8);
-  padding-top: 27px;
-  padding-bottom: 27px;
+  width: 370px;
+  height: 70px;
   margin-top: 0px;
   margin-bottom: 0px;
   width: 100%;
-  text-align: center;
+
 
   font-weight: 700;
   font-size: 14px;
@@ -877,7 +885,7 @@ padding-left: 24px;
   text-decoration: none;
   display: block;
 
-  transition-property: background-color, box-shadow;
+  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -904,11 +912,11 @@ padding-left: 24px;
   bottom: 0;
   background-color:rgba(33, 150, 243, 0.9);
 
+  transition-property: visibility, transform;
   transform: translateY(100%);
   transition-duration: 250ms;
   transition-duration: cubic-bezier(0.4, 0, 0.2, 1);
-
-  opacity: 0;
+  visibility: hidden;
 }
 
 .product-description {
@@ -925,11 +933,21 @@ padding-left: 24px;
   letter-spacing: 0.03em;
   color: var(--hero-title-color);
   }
+  
+  .card-link:hover .product-overlay {
+    transform: translateY(0);
+    visibility: visible;
+  }
 
-.card-link:hover, .card-link:focus .product-overlay {
+  .card-link:focus .product-overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* .card-link:hover, .card-link:focus .product-overlay {
   opacity: 1;
   transform: translateY(0);
-}
+  } */
 
 /* ---------Модальное окно------- */
 
@@ -945,6 +963,9 @@ padding-left: 24px;
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
+  transition-timing-function: var(--timing-function);
+  transition-duration: var(--transition-duration);
 }
 
 .backdrop.is-hidden .modal {
@@ -954,7 +975,7 @@ padding-left: 24px;
 .modal {
 
   transition-duration: 250ms;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-timing-function: var(--timing-function);
 
   position: absolute;
   top: 50%;
