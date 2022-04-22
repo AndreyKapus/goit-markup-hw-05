@@ -515,8 +515,8 @@ margin-left: 10px;
   color: var(--svg-color);
 
   transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
 }
 
 
@@ -585,8 +585,8 @@ border: 1px solid var(--svg-color);
 border-radius: 4px;
 
 transition-property: border, color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: var(--transition-duration);
+transition-timing-function: var(--timing-function);
 }
 
 .company {
@@ -658,8 +658,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
 
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .footer .mail:hover,
@@ -715,8 +715,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: rgba(255, 255, 255, 0.1);
 
     transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .footer-soc-link:hover,
@@ -789,9 +789,9 @@ margin-right: 70px;
 
   border: none;
 
-  transition-property: background-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, color, box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
 }
 
 
@@ -886,8 +886,8 @@ padding-left: 24px;
   display: block;
 
   transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .card-link:hover,
@@ -914,8 +914,8 @@ padding-left: 24px;
 
   transition-property: visibility, transform;
   transform: translateY(100%);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
   visibility: hidden;
 }
 
