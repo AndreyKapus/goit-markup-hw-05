@@ -198,7 +198,7 @@ html {
   padding-bottom: 32px;
 
   transition-property: color;
-  transition-duration: var(--transition-duration);
+  transition-duration: 2000ms;
   transition-timing-function: var(--timing-function);
 }
 
@@ -211,10 +211,12 @@ html {
 
 .mail-icon {
  margin-right: 10px;
+ fill: currentColor;
 }
 
 .tel-icon {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 /* Hero */
@@ -941,13 +943,8 @@ padding-left: 24px;
 
   .card-link:focus .product-overlay {
     transform: translateY(0);
-    opacity: 1;
+    visibility: visible;
   }
-
-  /* .card-link:hover, .card-link:focus .product-overlay {
-  opacity: 1;
-  transform: translateY(0);
-  } */
 
 /* ---------Модальное окно------- */
 
