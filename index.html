@@ -422,11 +422,44 @@
 
             <div data-modal class="backdrop is-hidden">
                 <div class="modal">
+                        <form class="form">
+                            
+                                <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+
+                                <div class="form-field">
+                                    <label for="name"> Имя</label>
+                                    <input type="text" name="name" id="name" class="form-input">
+                                </div>
+                                <div class="form-field">
+                                    <label for="tel">Телефон</label>
+                                    <input type="tel" name="tel" id="tel" class="form-input">
+                                </div>
+                                <div class="form-field">
+                                    <label for="email">Почта</label>
+                                    <input type="email" name="email" id="email" class="form-input">
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="comment">Коментарий</label>
+                                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                                </div>
+
+                                <div class="policy">
+                                    <input type="checkbox" name="policy" value="policy" id="policy">
+                                    <label for="policy-text">Соглашаюсь с рассылкой и принимаю 
+                                            <a href="" class="policy-link">Условия договора</a>
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="submit-button">Отправить</button>
+                        </form>
+
                     <button data-modal-close class="modal-button">
                         <svg class="icon-close" width="11" height="11">
                             <use href="./images/symbol-defs.svg#icon-close"></use>
                         </svg>
                     </button>
+
                 </div>
             </div>
 
