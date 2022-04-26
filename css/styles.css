@@ -198,7 +198,7 @@ html {
   padding-bottom: 32px;
 
   transition-property: color;
-  transition-duration: 2000ms;
+  transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
 
@@ -620,6 +620,8 @@ transition-timing-function: var(--timing-function);
 
   margin-top: 0px;
   margin-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .logo-item {
@@ -732,6 +734,7 @@ transition-timing-function: var(--timing-function);
 
 .footer-soc-items {
   justify-content: center;
+  padding-right: 93px;
 }
 
 .footer-container {
@@ -746,6 +749,72 @@ margin-right: 70px;
 .footer-soc-icon {
   fill: var(--hero-title-color);
 }
+
+.sign-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+
+  width: 200px;
+  height: 50px;
+
+  color: var(--hero-title-color);
+  background-color: var(--accent-color);
+
+  background: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.sign-icon {
+  margin-left: 10px;
+}
+
+.footer-form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.sign-form {
+  width: 358px;
+}
+
+.sign-label {
+  display: block;
+  color: var(--hero-title-color);
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.sign-input {
+ width: 358px;
+ height: 50px;
+
+ background-color: var(--accent-background-color);
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ box-sizing: border-box;
+ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+ border-radius: 4px;
+}
+
+.sign-form input::placeholder {
+  padding-left: 12px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+
+
 /* --------------Portfolio -----------------*/
 
 .portfolio-title {
@@ -1033,6 +1102,12 @@ textarea {
   resize: none;
 }
 
+/* --------------Формы подписки----------------- */
+
+.modal {
+  padding: 40px;
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
@@ -1092,6 +1167,28 @@ textarea {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.comment-field {
+  width: 448px;
+  height: 120px;
+
+  padding: 12px 16px;
+  
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px; 
+}
+
+.comment-input {
+  margin-bottom: 20px;
+}
+
+.comment-field:focus {
+  outline-color: var(--accent-color);
+}
+
+/* ------------------политика----------------- */
+
 .policy {
   display: flex;
   align-items: center;
@@ -1142,6 +1239,13 @@ textarea {
     overflow: hidden;
 }
 
+.policy .policy-link {
+
+  color: var(--accent-color);
+}
+
+/* -----------------Submit button---------------- */
+
 .submit-button {
   display: flex;
   margin-right: auto;
@@ -1162,18 +1266,3 @@ textarea {
   cursor: pointer;
 }
 
-.comment-field {
-  width: 448px;
-  height: 120px;
-
-  padding: 12px 16px;
-  
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px; 
-}
-
-.comment-field:focus {
-  outline-color: var(--accent-color);
-}
